@@ -4,10 +4,10 @@ import Table_Of_Content from "../table_content";
 import Book_Deatlis from "../bookDetalis";
 import Imgcard from "../imgCard";
 import Header_Content from "../headerContent";
-import {auther_info} from '../commonArray.jsx'
-import {auth} from '../commonArray.jsx'
-import { bookArray } from '../commonArray.jsx'
-import { Page1 } from '../commonArray.jsx'
+import {auther_info} from '../Common Component/commonArray.jsx'
+import {auth} from '../Common Component/commonArray.jsx'
+import { bookArray } from '../Common Component/commonArray.jsx'
+import { Page1 } from '../Common Component/commonArray.jsx'
 
 const Book1 = () => {
 

@@ -1,18 +1,17 @@
-import img1 from '../images/image-1.jpeg';
-import img2 from '../images/image-2.jpg';
-import img3 from '../images/image-3.jpg';
-import img4 from '../images/image-4.png';
-import img5 from '../images/image-5.jpg';
-import img6 from '../images/image-6.jpeg';
-import img7 from '../images/image-7.jpeg';
-import img8 from '../images/image-8.jpeg';
-import img9 from '../images/image-9.jpeg';
-import img10 from '../images/image-10.jpeg';
-import img11 from '../images/image-11.jpeg';
-import img12 from '../images/image-12.jpg';
-import img13 from '../images/image-13.jpg';
-import auth1 from '../images/auther-1.png';
-import auth2 from '../images/auther-2.png';
+import img1 from '../../images/image-1.jpeg';
+import img2 from '../../images/image-2.jpg';
+import img3 from '../../images/image-3.jpg';
+import img4 from '../../images/image-4.png';
+import img5 from '../../images/image-5.jpg';
+import img6 from '../../images/image-6.jpeg';
+import img7 from '../../images/image-7.jpeg';
+import img8 from '../../images/image-8.jpeg';
+import img9 from '../../images/image-9.jpeg';
+import img10 from '../../images/image-10.jpeg';
+import img11 from '../../images/image-11.jpeg';
+import img12 from '../../images/image-12.jpg';
+import auth1 from '../../images/auther-1.png';
+import auth2 from '../../images/auther-2.png';
 
   export  const Page1 = [
         {image:img1,name:"Sam Reaves",info:"I use Udemy for learning specific technologies but chose Builder Book after being impressed with their website being the actual project you build. The up to date, step by step instructions made creating the app a breeze."},
@@ -33,7 +32,6 @@ import auth2 from '../images/auther-2.png';
         {image:img10,name:"Patrick Caughey",info:"The SaaS Boilerplate book has been super helpful. The first few chapters got me up and running very quickly, and as I re-read them I continued to learn more about the 'why' behind the decisions you made. It's been fun and quite informative!"},
         {image:img11,name:"Aleksandrs Savkins",info:"The book is exactly what I was looking for - I needed some guide that will cover the entire processes of creating web apps and saas. I didn't want to waste time and go through many guides, the book is a huge time saver!"},
         {image:img12,name:"Jia Wang",info:"I want to thank you all for your effort to build up this fantastic project. It is really awesome for full-stack beginners! As one of them, I am using this project to build my own thing, during the implementation I learned a lot, and I might have gave up if I did not choose to purchase BUILDER BOOK! Deeply appreciate that!"},
-        {image:img13,name:"Igor Andreienko",info:"I decided to study the first book and then move on to the next one. The book is really well written, which makes it a joy to study. Thank you."},
     ]
 
     export const bookArray = [
@@ -47,40 +45,136 @@ import auth2 from '../images/auther-2.png';
         {
             title:"Introduction",
             infos: [
-            {info:"What you will learn"},
-            {info:"Why should I pay $49 for this book?"},
-            {info:"Project structure"},
+            {info:"What you will learn",subinfo:[]},
+            {info:"Why should I pay $49 for this book?",subinfo:[]},
+            {info:"Project structure",subinfo:[]},
             {info:"Screenshots",subinfo:[
-                {sub:"Customer pages"},
-                {sub:"Admin pages"}
+                {id:0,sub:"Customer pages"},
+                {id:1,sub:"Admin pages"}
             ]},
-            {info:"Authors"}
+            {info:"Authors",subinfo:[]}
             ]
         },
+
         {
             title:"Chapter 5: Book data model. Chapter data model. MongoDB index. API infrastructure and user roles. Read chapter API.",
             infos: [
             {info:"Book data model",subinfo: [
-                {sub:"Schema for Book data model"},
-                {sub:"Static methods for Book data model"},
+                {id:0,sub:"Schema for Book data model"},
+                {id:1,sub:"Static methods for Book data model"},
             ]},
             {info:"Chapter data model",subinfo : [
-                {sub:"Schema for Book data model"},
-                {sub:"Static methods for Chepter data model"},
+                {id:0,sub:"Schema for Book data model"},
+                {id:1,sub:"Static methods for Chepter data model"},
             ]},
-            {info:"MongoDB index"},
+            {info:"MongoDB index",subinfo:[]},
             {info:"API infrastructure and user roles",subinfo:[
-                {sub:"Pages and components for user roles"},
-                {sub:"API methods by user roles"},
-                {sub:"Express routes by user roles"},
-                {sub:"Custom routing for pages"}
+                {id:0,sub:"Pages and components for user roles"},
+                {id:1,sub:"API methods by user roles"},
+                {id:2,sub:"Express routes by user roles"},
+                {id:3,sub:"Custom routing for pages"}
             ]},
             {info:"Read chapter API",subinfo:[
-                {sub:"ReadChapter page"},
-                {sub:"Testing Read chapter API"},
+                {id:0,sub:"ReadChapter page"},
+                {id:1,sub:"Testing Read chapter API"},
             ]},
             ]
-        }
+        },
+
+        {
+            title:"Chapter 1: Set up Node.js project. VS code editor and lint. Set up Next.js project. Material-UI integration. Server-side rendering. Custom styles.",
+            infos: [
+            {info:"Set up Node.js project",subinfo:[
+                {id:0,sub:"Installing Node.js and Yarn"},
+                {id:1,sub:"package.json"}
+            ]},
+            {info:"VS code editor and lint",subinfo:[
+                {id:0,sub:"VS code editor"},
+                {id:1,sub:"ESLint and Prettier"}
+            ]},
+            {info:"Set up Next.js project",subinfo:[
+                {id:0, sub:"Basic structure"},
+                {id:1, sub:"Compiling code"},
+                {id:2, sub:"Document HOC"},
+                {id:3, sub:"App HOC extension"},
+                {id:4, sub:"Index page"},
+                {id:5, sub:"Header component"},
+            ]},
+            {info:"Material-UI integration",subinfo:[
+                {id:0, sub:"MyDocument component"},
+                {id:1, sub:"Spread operator"},
+                {id:2, sub:"theme and ThemeProvider"},
+                {id:3, sub:"Testing Next.js/Material-UI integration"},
+            ]},
+            {info:"Server-side rendering",subinfo:[]},
+            {info:"Custom styles",subinfo:[]}
+            ]
+        },
+
+        {
+            title:"Chapter 6: Set up Github API infrastructure. Sync content API infrastructure. Missing UI infrastructure for Admin user. Two improvements. Testing.",
+            infos: [
+            {info:"Book data model",subinfo:[
+                {id:0, sub:"Schema for Book data model"},
+                {id:1, sub:"Static methods for Book data model"}
+            ]},
+            {info:"Chapter data model",subinfo:[
+                {id:0, sub:"VS code editorSchema for Chapter data model"},
+                {id:1, sub:"Static methods for Chapter data model"}
+            ]},
+            {info:"API infrastructure and user roles",subinfo:[
+                {id:0, sub:"Pages and components for user roles"},
+                {id:1, sub:"API methods by user roles"},
+                {id:2, sub:"Express routes by user roles"},
+                {id:3, sub:"Custom routing for pages"},
+            ]},
+            {info:"Read chapter API",subinfo:[
+                {id:0, sub:"ReadChapter page"},
+                {id:1, sub:"Testing Read chapter API"},
+            ]},
+            {info:"Server-side rendering",subinfo:[]},
+            ]
+        },
+
+        {
+            title:"Chapter 2: HTTP. Express server. Next-Express server, nodemon. Index.getInitialProps. User data model and mongoose. MongoDB database and dotenv. Testing server-database connection. Retrieving document. Session and cookie. MenuWithAvatar and Header components.",
+            infos: [
+            {info:"HTTP",subinfo:[]},
+            {info:"Express server",subinfo:[
+                {id:0, sub:"Next-Express server, nodemon"},
+                {id:1, sub:"Index.getInitialProps"},
+                {id:2, sub:"Testing new server"},
+            ]},
+            {info:"MongoDB database and dotenv",subinfo:[
+                {id:0, sub:"Testing server-database connection"},
+                {id:1, sub:"Retrieving document"}
+            ]},
+            {info:"Session",subinfo:[
+                {id:0, sub:"Configure session"},
+                {id:1, sub:"Save session"},
+                {id:2, sub:"Testing session and cookie"},
+            ]},
+            ]
+        },
+
+        {
+            title:"Chapter 7: Table of Contents. Sections. Sidebar. Toggle TOC. Highlight for section. Active section. Hide Header. Mobile browser.",
+            infos: [
+            {info:"Hide Header",subinfo:[]},
+            {info:"Table of Contents",subinfo:[
+                {id:0, sub:"Sections"},
+                {id:1, sub:"Sidebar"},
+                {id:2, sub:"Toggle TOC"},
+            ]},
+            {info:"Highlight for section",subinfo:[
+                {id:0, sub:"Active section"},
+            ]},
+            {info:"Hide Header",subinfo:[]},
+            {info:"Mobile browser",subinfo:[]}
+            ]
+        },
+
+
     ]
 
     const className = {borderRadius:"10px",height:"7rem",width:"7rem"}

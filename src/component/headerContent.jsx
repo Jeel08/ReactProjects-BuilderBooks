@@ -2,6 +2,7 @@ import './Books/style.css';
 const Header_Content = ({headerDetalis}) => {
     return (
         <section>
+            <div style={{paddingTop:"3rem"}}>
             {
                 headerDetalis.map((ar)=> {
                     return (
@@ -17,6 +18,7 @@ const Header_Content = ({headerDetalis}) => {
                     )
                 })
             }
+            </div>
         </section>
     )
 }

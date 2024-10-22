@@ -4,9 +4,9 @@ import Book_Deatlis from "../bookDetalis";
 import Header_Content from "../headerContent";
 import Imgcard from "../imgCard";
 import Table_Of_Content from "../table_content";
-import { auther_info } from "../commonArray";
-import { auth } from "../commonArray";
-import { Page2 } from "../commonArray";
+import { auther_info } from "../Common Component/commonArray";
+import { auth } from "../Common Component/commonArray";
+import { Page2 } from "../Common Component/commonArray";
 
 const Book2 = () => {
 

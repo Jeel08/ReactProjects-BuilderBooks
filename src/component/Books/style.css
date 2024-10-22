@@ -7,7 +7,8 @@
     color: #58a6ff;
 }
 .btnStyle {
-    height: 2rem;
+    padding: 5px;
+    height: 35px;
     width: 15rem;
     text-align: center;
     background-color: green;
@@ -19,11 +20,17 @@
 .btnStyle:hover {
     background-color: lightblue;
     color: black;
+    text-align: center;
 }
 .imgStyle {
     height:5rem;
     width:5rem;
-    border-radius:1rem
+    border-radius:1rem;
+    cursor: pointer;
+}
+.imgStyle:hover {
+    height: 6rem;
+    width: 6rem;
 }
 .img_p_Style {
     display:flex;
@@ -41,6 +48,13 @@
     background-color:gray;
     color:white;
     border-radius:5px;
+    cursor: pointer;
+}
+.imgCard_Style:hover {
+    width: 25rem;
+    height: auto;
+    background-color: #424242;
+    color: white;
 }
 .main_div_Style {
     display:flex;
@@ -53,7 +67,7 @@
     padding: 5px;
     text-align: center;
     width:10rem;
-    height:2rem;
+    height:35px;
     background-color:black;
     color:white;
     border:1px solid white;
@@ -69,20 +83,47 @@
     padding:1rem
 }
 .login_Style {
-   width: 50% !important;
+   width: 50%;
 }
-.paddingNavbar {
-    padding:8px
-}
+
 .brdrRadius {
     border-radius: 10px;
 }
 .singup_Style {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    border: 2px solid whitesmoke;
+    width: 50%;
 }
+.table_content_Style {
+    width:30rem;
+    padding: 1rem;
+    background-color:#424242;
+    box-shadow: 0px 0px 10px white;
+    margin-bottom: 3rem;
+}
+.main_table_Style {
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.form_Style {
+    border:2px dotted white;
+    width:50%;
+    height: fit-content;
+    padding:1rem;
+    margin-top: 2rem;
+}
+.mb-Style {
+    margin-bottom:5rem
+}
+.up_arrow_Style {
+    height:3rem;
+    width:3rem;
+    float:right;
+    cursor: pointer;
+}
+/* .up_arrow_Style:hover {
+    width: 4rem;
+    height: 4rem;
+    transition: width height 2s;
+} */

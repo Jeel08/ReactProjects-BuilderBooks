@@ -6,6 +6,7 @@ const Imgcard = ({imgarray}) => {
 
     return (
         <section>
+            <div className="mb-Style">
 
             <div className="main_div_Style">
             {
@@ -31,6 +32,8 @@ const Imgcard = ({imgarray}) => {
                 <p className="text_btn_Style brdrRadius">See All Review</p>
                 <p className="text_btn_Style brdrRadius">About Us</p>
             </div>
+            </div>
+
 
         </section>
     )

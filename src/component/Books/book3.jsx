@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-pascal-case */
 import Author from "../author";
 import Book_Deatlis from "../bookDetalis";
-import { Page2 } from "../commonArray";
-import { auther_info } from "../commonArray";
-import { auth } from "../commonArray";
+import { Page2 } from "../Common Component/commonArray";
+import { auther_info } from "../Common Component/commonArray";
+import { auth } from "../Common Component/commonArray";
 import Header_Content from "../headerContent";
 import Imgcard from "../imgCard";
 import Table_Of_Content from "../table_content";
@@ -21,9 +21,9 @@ const Book3 = () => {
     ]
 
     const bookArray = [
-        {title:"Robust JS/TS stack",info:"Our open source project occasionally trends on GitHub inside the TypeScript category, and we keep our book up-to-date with the latest versions of all dependencies. Build a web app with React.js, Next.js, Material-UI, MobX, WebSockets, Express.js, Node.js, Mongoose, MongoDB. Write with TypeScript."},
-        {title:"Popular third-party APIs",info:"In addition to numerous internal API infrastructures, integrate your SaaS web application with external API services. Integrate with Google for user authentication and analytics, AWS SES for transactional emails, AWS S3 for file hosting and serving, MailChimp for newsletters, and Stripe for selling."},
-        {title:"Build your own SaaS product and become an owner of your SaaS business",info:"This book is not another to-do list app. You will build a practical web application with must-have features that can become your SaaS business. We take you through every step of building a SaaS web application from scratch."},
+        {title:"Robust stack, production-tested tools",info:"You will build a browser extension project and a standalone server project that communicate with each other. You will learn to use popular tools like react, axios, cheerio, typescript, openai, stripe and more."},
+        {title:"Important business features and third-party APIs",info:"You will learn and implement a user authentication system with jsonwebtoken and bcrypt; LLM feature with openai and textract; and paid subscriptions with stripe."},
+        {title:"Public support",info:"If you have questions, search our issues Github issues or create a new one. We are happy to answer beginner to expert-level questions. If you purchased our book, we typically reply within 1 or 2 days."},
         {title:"Public support",info:"If you have questions, search our closed Github issues or create a new one. We are happy to answer beginner to expert-level questions. With the help of our readers, we've made many improvements to our book. If you purchased our book, we typically reply within 1 or 2 days."}
     ]
     

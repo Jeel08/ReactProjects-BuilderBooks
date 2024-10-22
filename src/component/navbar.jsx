@@ -14,9 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 </>
 
 const Navbar = () => {
-    if((window.location.pathname === "/login" ) ||( window.location.pathname === "/singup")) 
-        return "";
-    else
     return (
         <>
         <nav>

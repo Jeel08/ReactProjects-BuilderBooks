@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-pascal-case */
-import { Page3 } from "../commonArray";
+import { Page3 } from "../Common Component/commonArray";
 import Header_Content from "../headerContent";
 import Imgcard from "../imgCard";
 

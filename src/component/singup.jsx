@@ -1,96 +1,162 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
 import './Books/style.css';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import {Email_Validation,Phone_Validation,Password_Validation} from './Common Component/commonValidation.jsx'
 
 const Singup = ()=> {
+    
+    const [formData,setFormData] = useState({
+        fname:"",
+        lname:"",
+        email:"",
+        phone: '',
+        password:"",
+        confirm_password:""
+    });
+
+    const [errors, setErrors] = useState({
+        fname:"",
+        lname:"",
+        email:"",
+        phone:'',
+        password:"",
+        confirm_password:""
+      });
+
+    const handleChange = (e) => {
+        const {name,value} = e.target;
+        setFormData({
+            ...formData,
+            [name]:value
+        })
+    }
+
+    const handleSubmit = (e) => {
+        
+        e.preventDefault();
+        let formIsValid = true;
+        let newErrors = {
+            email:"",
+            phone:'',
+            password:"",
+            confirm_password:"" };
+
+        console.log(formData);
+        if(!Email_Validation(formData.email))
+        {
+            formIsValid = false;
+            newErrors.email="Email is invalid";
+        } 
+        if(!Phone_Validation(formData.phone)) {
+            formIsValid = false;
+            newErrors.phone = "Phone Number is invalid";
+        }
+        if(!Password_Validation(formData.password)) {
+            formIsValid = false;
+            newErrors.password = "Password is invalid";
+        }
+        if(!Phone_Validation(formData.confirm_password))
+        {
+            formIsValid = false;
+            newErrors.confirm_password = "Confirm Password is invalid"
+        }
+        if(formData.password !== formData.confirm_password) {
+            formIsValid= false;
+            newErrors.confirm_password = "Password and Confirm Password must be Same."
+        }
+
+        setErrors(newErrors);
+
+        if(formIsValid)
+        {
+            console.log("Final Formdata",formData);
+        }
+    }
+
     return (
         <>
-        <div style={{height:"100vh"}}>
-
-        <h2 style={{textAlign:"center",marginTop:"5rem"}}>Singup Page</h2>
-        <div  className='singup_Style brdrRadius'>
-
-            <div style={{display:"flex",gap:"5rem"}}>
-
-                <div>
-                    <label htmlFor="">First Name : </label>
-                    <input type="text" 
-                            name='fname'
-                            title='First Name'
-                            placeholder='Enter a First Name'
-                            className='brdrRadius'
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="">Last Name : </label>
-                    <input type="text" 
-                            name='lname'
-                            title='Last Name'
-                            placeholder='Enter a Last Name'
-                            className='brdrRadius'
-                    />
-                </div>
+            <div>
+            <p style={{borderLeft:"1px solid white" }}></p>
+            <h2 style={{textAlign:"center",marginTop:"2rem",marginBottom:"10px"}}>Singup Page</h2>
             </div>
 
-            <div style={{display:"flex",gap:"5rem"}}>
-                <div>
-                    <label htmlFor="">Email Address : </label>
-                    <input type="text" 
-                            name='email'
-                            title='Email'
-                            placeholder='Enter an Email Address'
-                            className='brdrRadius'
-                            />
-                </div>
+            <div style={{height:"100%",display:"flex",justifyContent:"center"}}>
 
-                <div>
-                    <label htmlFor="">Contact Number : </label>
-                    <input type="text" 
-                            name='number'
-                            title='number'
-                            placeholder='Enter a Number'
-                            className='brdrRadius'
-                            />
-                </div>
+                <Form className='form_Style' onSubmit={handleSubmit} autoComplete="off">
 
+                    <div>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>First Name : *</Form.Label>
+                            <Form.Control type="text" placeholder="Enter a First Name" className='singup_Style' name='fname' required
+                             value={formData.fname} onChange={(e)=>handleChange(e)} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Last Name : *</Form.Label>
+                            <Form.Control type="text" placeholder="Enter a Last Name"  className='singup_Style' name='lname' required
+                            value={formData.lname} onChange={(e)=>handleChange(e)} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Email Address : *</Form.Label>
+                            <Form.Control type="email" placeholder="Enter an Email Address" className='singup_Style' name='email' required
+                            isInvalid={!!errors.email} value={formData.email} onChange={(e)=>handleChange(e)} />
+                            <Form.Control.Feedback type="invalid">
+                                {errors.email}
+                            </Form.Control.Feedback>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Contact Number : *</Form.Label>
+                            <Form.Control type="text" placeholder="Enter a Contact Number"  className='singup_Style' name='phone' required
+                            isInvalid={!!errors.phone} value={formData.phone} onChange={(e)=>handleChange(e)} />
+                            <i>Only Number</i>
+                            <Form.Control.Feedback type="invalid">
+                                {errors.phone}
+                            </Form.Control.Feedback>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password :  *</Form.Label>
+                            <Form.Control type="password" placeholder="Enter a Password"  className='singup_Style' name='password' required
+                             isInvalid={!!errors.password} value={formData.password} onChange={(e)=>handleChange(e)} />
+                             <Form.Control.Feedback type="invalid">
+                                {errors.password}
+                            </Form.Control.Feedback>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Confirm Password :  *</Form.Label>
+                            <Form.Control type="password" placeholder="Enter a Confirm Password"  className='singup_Style' name='confirm_password' required
+                            isInvalid={!!errors.confirm_password} value={formData.confirm_password} onChange={(e)=>handleChange(e)}/>
+                            <Form.Control.Feedback type="invalid">
+                                {errors.confirm_password}
+                            </Form.Control.Feedback>
+                        </Form.Group>
+                    </div>
+
+                    <div style={{display:"flex",gap:"2rem",justifyContent:"center"}}>
+                        <Button variant="success" type='submit'>Submit</Button>
+                        <Button  variant="danger" >Cancle</Button>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                        <p style={{textAlign:"center"}}>
+                            Already Have an Account?
+                            <span> 
+                            <a href="/login" className='anchorStyle paddingNavbar' style={{color:"wheat",textDecoration:"underline"}}> Login </a>
+                            </span>
+                        </p>
+                    </div>
+
+                </Form>
             </div>
 
-            <div style={{display:"flex",gap:"5rem"}}>
-                <div>
-                    <label htmlFor="">Password : </label>
-                    <input type="text" 
-                            name='password'
-                            title='password'
-                            placeholder='Enter a Password'
-                            className='brdrRadius'
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="">Confirm Password : </label>
-                    <input type="text" 
-                            name='confirm_password'
-                            title='Confirm Password'
-                            placeholder='Enter a Confirm Password'
-                            className='brdrRadius'
-                    />
-                </div>
-            </div>
-
-            <div style={{display:"flex",gap:"2rem"}}>
-                <Button variant="success" >Submit</Button>
-                <Button  variant="danger" >Cancle</Button>
-            </div>
-            
-            <p style={{textAlign:"center"}}>
-                        Already Have an Account?
-                        <span> 
-                            <a href="/login" className='anchorStyle paddingNavbar' style={{color:"wheat",textDecoration:"underline"}}>Login</a>
-                        </span>
-                    </p>
-
-        </div>
-        </div>
 
         </>
     )
