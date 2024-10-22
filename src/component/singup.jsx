@@ -56,12 +56,12 @@ const Singup = ()=> {
         }
         if(!Password_Validation(formData.password)) {
             formIsValid = false;
-            newErrors.password = "Password is invalid";
+            newErrors.password = "Password must have One Number, One Special word, One Capital word, One Small word and Atleat 8 digit";
         }
-        if(!Phone_Validation(formData.confirm_password))
+        if(!Password_Validation(formData.confirm_password))
         {
             formIsValid = false;
-            newErrors.confirm_password = "Confirm Password is invalid"
+            newErrors.confirm_password = "Confirm Password must have One Number, One Special word, One Capital word, One Small word and Atleat 8 digit"
         }
         if(formData.password !== formData.confirm_password) {
             formIsValid= false;
