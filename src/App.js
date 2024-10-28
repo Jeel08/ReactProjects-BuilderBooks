@@ -8,7 +8,7 @@ import Review from './component/Books/review';
 import Login from './component/login';
 import Singup from './component/singup';
 import './component/Books/style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './component/footer.jsx';
 
 function App() {

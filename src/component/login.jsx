@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Books/style.css';
 import { useState } from 'react';
-import {Email_Validation,Phone_Validation,Password_Validation} from './Common Component/commonValidation.jsx'
+import {Email_Validation,Password_Validation} from './Common Component/commonValidation.jsx'
 
 
 const Login = () => {
